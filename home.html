@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Andhra Pradesh State Tourism</title>
+    <link rel="icon" href="Emblem_of_Andhra_Pradesh.png" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: white;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-weight: normal;
+            color: #000;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: white;
+            border-bottom: 1px solid #ccc;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: #000 !important;
+        }
+        .nav-link {
+            color: #000 !important;
+            font-weight: normal;
+        }
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Marquee */
+        marquee {
+            background-color: white;
+            color: #000;
+            padding: 5px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        /* Heading */
+        h1 {
+            font-weight: normal;
+            color: #000;
+        }
+
+        /* News Section */
+        .news-box {
+            background: #fff;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .news-box h4 {
+            font-weight: bold;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        /* Region Buttons */
+        .region-btn {
+            padding: 12px;
+            font-size: 1rem;
+            background: #f8f8f8;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            transition: background 0.2s ease;
+            color: #000;
+            cursor: pointer;
+        }
+        .region-btn:hover {
+            background: #e9e9e9;
+        }
+
+         /* Loader */
+        #loader {
+            display: none;           /* Hidden by default */
+            position: fixed;         /* Stay on top of page */
+            top: 50%;                /* Center vertically */
+            left: 50%;               /* Center horizontally */
+            transform: translate(-50%, -50%); /* Adjust to exact center */
+            z-index: 9999;           /* Make sure it's on top of all content */
+        }
+
+        #loader .spinner {
+            border: 8px solid #f3f3f3;   /* Light grey */
+            border-top: 8px solid #000;   /* Black */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+         <div class="spinner"></div>
+    </div></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="Emblem_of_Andhra_Pradesh.png" alt="AP Logo" width="40" height="40" class="me-2">
+                Andhra Pradesh Tourism
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html" onclick="showLoader(event, 'about.html')">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Marquee -->
+    <marquee behavior="scroll" direction="left">
+        Welcome to the Un-Official Andhra Pradesh Tourism Portal — Explore North, Middle, and South Andhra's beauty!
+    </marquee>
+
+    <!-- Main Content -->
+    <div class="container my-4 text-center">
+        
+        <h1 class="mb-4">Discover Andhra Pradesh</h1>
+        <div class="row justify-content-center">
+            <aside class="col-md-2 d-none d-md-block text-start">
+    <h5 class="mb-2">Current News</h5>
+    <marquee behaviour="scroll" direction="left" scrollamount="2" height="150px">
+        <div class="mb-3">
+            <img src="https://c.ndtvimg.com/2024-06/q5af31b_pawan-kalyan-chandrababu-naidu_625x300_12_June_24.jpg?im=FaceCrop,algorithm=dnn,width=1200,height=738" alt="Festival 1" class="img-fluid mb-2">
+            <p class="small">DCM Meets CM</p>
+        </div>
+    </marquee>
+</aside>
+  <div class="col-md-6">
+                <div class="d-grid gap-3">
+                      <button class="region-btn" onclick="showLoader(event, 'Srikakulam.html')">Srikakulam</button>
+                      <button class="region-btn" onclick="showLoader(event, 'Vizianagaram.html')">Vizianagaram</button>
+                      <button class="region-btn" onclick="showLoader(event, 'Visakhapatnam.html')">Visakhapatnam</button>
+                      <button class="region-btn" onclick="showLoader(event, 'EastGodavari.html')">East Godavari</button>
+                      <button class="region-btn" onclick="showLoader(event, 'WestGodavari.html')">West Godavari</button>
+                      <button class="region-btn" onclick="showLoader(event, 'krishna.html')">Krishna</button>
+                      <button class="region-btn " onclick="showLoader(event, 'guntur.html')">Guntur</button>
+                      <button class="region-btn " onclick="showLoader(event, 'prakasam.html')">Prakasam</button>
+                      <button class="region-btn " onclick="showLoader(event, 'nellore.html')">Nellore</button>
+                      <button class="region-btn" onclick="showLoader(event, 'chittoor.html')">Chittoor</button>
+                      <button class="region-btn " onclick="showLoader(event, 'kadapa.html')">Kadapa</button>
+                      <button class="region-btn" onclick="showLoader(event, 'kurnool.html')">Kurnool</button>
+                      <button class="region-btn" onclick="showLoader(event, 'anantapur.html')">Anantapur</button>
+                </div>
+        </div>
+
+            </div>
+        <!-- Latest News -->
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-6 news-box">
+                <h4>Latest News</h4>
+                <ul>
+                    <li>New tourist spots opened in Visakhapatnam</li>
+                    <li>Cultural festival announced in Vijayawada</li>
+                    <li>River boating season begins in Rajahmundry</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function showLoader(event, url) {
+            event.preventDefault(); // Prevent default link behavior
+            document.getElementById('loader').style.display = 'block';
+            setTimeout(() => {
+                window.location.href = url;
+            }, 2000); // 2-second loader
+        }
+    </script>
+
+</body>
+</html>

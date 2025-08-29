@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guntur District Tourism</title>
+    <link rel="icon" href="Emblem_of_Andhra_Pradesh.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: white;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #000;
+            padding-top: 80px;
+        }
+        .navbar { background-color: white; border-bottom: 1px solid #ccc; }
+        .navbar-brand { font-weight: bold; color: #000 !important; }
+        .nav-link { color: #000 !important; font-weight: normal; }
+        .nav-link:hover { text-decoration: underline; }
+        h1 { color: #000; font-weight: bold; margin-bottom: 15px; }
+        .place-card img { height: 200px; object-fit: cover; border-radius: 5px; }
+        .card { border: 1px solid #ccc; }
+        .travel-info { background-color: #f8f9fa; padding: 12px; border-radius: 5px; font-size: 0.95rem; }
+        marquee { color: #000; font-size: 1.05rem; }
+        #loader { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999; }
+        #loader .spinner { border: 8px solid #f3f3f3; border-top: 8px solid #000; border-radius: 50%; width: 60px; height: 60px; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+         <div class="spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="Emblem_of_Andhra_Pradesh.png" alt="AP Logo" width="40" height="40" class="me-2">
+                Andhra Pradesh Tourism
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="home.html" onclick="showLoader(event, 'home.html')">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html" onclick="showLoader(event, 'about.html')">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container">
+        <h1 class="text-center">Guntur District Tourism</h1>
+        <p class="text-center lead">
+            <marquee>Guntur District, famous for Amaravati Stupa, ancient temples, Kondaveedu Fort, and Mangalagiri, is a blend of history, culture, and spirituality.</marquee>
+        </p>
+
+        <div class="row g-4 mt-3">
+
+            <!-- Amaravati Stupa -->
+            <div class="col-md-4">
+                <div class="card place-card shadow-sm">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtdmDOT0NiVbPgEmmtCiz9jPaP1MqB23ui_Q&s" class="card-img-top" alt="Amaravati Stupa">
+                    <div class="card-body">
+                        <h5 class="card-title">Amaravati Stupa</h5>
+                        <p class="card-text">An ancient Buddhist stupa, symbolizing peace and spiritual heritage, located on the banks of Krishna River.</p>
+                        <div class="travel-info">
+                            <strong>Travel Tips:</strong>
+                            <ul class="mb-0">
+                                <li>Nearest City: Amaravati</li>
+                                <li>Best Time: October–March</li>
+                                <li>Activities: Spiritual visit, heritage walk, photography</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kondaveedu Fort -->
+            <div class="col-md-4">
+                <div class="card place-card shadow-sm">
+                    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/kondaveedu-fort-guntur-andhra-pradesh-2-attr-hero?qlt=82&ts=1726743768425" class="card-img-top" alt="Kondaveedu Fort">
+                    <div class="card-body">
+                        <h5 class="card-title">Kondaveedu Fort</h5>
+                        <p class="card-text">A historical hill fort with 21 structures, offering scenic views and a glimpse into Andhra’s medieval past.</p>
+                        <div class="travel-info">
+                            <strong>Travel Tips:</strong>
+                            <ul class="mb-0">
+                                <li>Nearest Town: Kondaveedu (25 km from Guntur)</li>
+                                <li>Best Time: October–February</li>
+                                <li>Activities: Trekking, heritage exploration, photography</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mangalagiri Temple -->
+            <div class="col-md-4">
+                <div class="card place-card shadow-sm">
+                    <img src="https://hblimg.mmtcdn.com/content/hubble/img/puri/mmt/activities/m_Puri_activity_Mangalagiri%20Temple_l_366_577.jpg?im=Resize=(288,162)" class="card-img-top" alt="Mangalagiri Temple">
+                    <div class="card-body">
+                        <h5 class="card-title">Mangalagiri Temple</h5>
+                        <p class="card-text">One of the eight important sacred places of Lord Narasimha, known for its unique Panakala Narasimha Swamy temple.</p>
+                        <div class="travel-info">
+                            <strong>Travel Tips:</strong>
+                            <ul class="mb-0">
+                                <li>Nearest City: Guntur/Vijayawada</li>
+                                <li>Best Time: Year-round</li>
+                                <li>Activities: Pilgrimage, rituals, sightseeing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Uppalapadu Bird Sanctuary -->
+            <div class="col-md-4">
+                <div class="card place-card shadow-sm">
+                    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/2-uppalapadu-bird-sanctuary-guntur-andhra-pradesh-attr-hero?qlt=82&ts=1726816507773" class="card-img-top" alt="Uppalapadu Bird Sanctuary">
+                    <div class="card-body">
+                        <h5 class="card-title">Uppalapadu Bird Sanctuary</h5>
+                        <p class="card-text">A serene sanctuary home to thousands of migratory birds including pelicans and painted storks.</p>
+                        <div class="travel-info">
+                            <strong>Travel Tips:</strong>
+                            <ul class="mb-0">
+                                <li>Nearest City: Guntur</li>
+                                <li>Best Time: November–February</li>
+                                <li>Activities: Birdwatching, nature photography</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Amaralingeswara Temple -->
+            <div class="col-md-4">
+                <div class="card place-card shadow-sm">
+                    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/amaralingeshwara-temple-amaravati-andhra-pradesh-1-attr-hero?qlt=82&ts=1726743722820" class="card-img-top" alt="Amaralingeswara Temple">
+                    <div class="card-body">
+                        <h5 class="card-title">Amaralingeswara Temple</h5>
+                        <p class="card-text">A sacred temple dedicated to Lord Shiva, one of the Pancharama Kshetras in Andhra Pradesh.</p>
+                        <div class="travel-info">
+                            <strong>Travel Tips:</strong>
+                            <ul class="mb-0">
+                                <li>Nearest City: Amaravati</li>
+                                <li>Best Time: Year-round</li>
+                                <li>Activities: Pilgrimage, rituals, spiritual learning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ethipothala Waterfalls -->
+            <div class="col-md-4">
+                <div class="card place-card shadow-sm">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/5a/c3/dc/photo4jpg.jpg?w=900&h=500&s=1" class="card-img-top" alt="Ethipothala Waterfalls">
+                    <div class="card-body">
+                        <h5 class="card-title">Ethipothala Waterfalls</h5>
+                        <p class="card-text">A stunning 70 feet high waterfall on Chandravanka River, surrounded by lush greenery and caves.</p>
+                        <div class="travel-info">
+                            <strong>Travel Tips:</strong>
+                            <ul class="mb-0">
+                                <li>Nearest Town: Nagarjuna Sagar (close to Guntur border)</li>
+                                <li>Best Time: August–December</li>
+                                <li>Activities: Trekking, nature walk, photography</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function showLoader(event, url) {
+            event.preventDefault(); 
+            document.getElementById('loader').style.display = 'block';
+            setTimeout(() => { window.location.href = url; }, 2000);
+        }
+    </script>
+
+</body>
+</html>

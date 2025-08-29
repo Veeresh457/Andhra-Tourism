@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andhra Pradesh State Tourism</title>
+    <link rel="icon" href="Emblem_of_Andhra_Pradesh.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: white;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #000;
+            padding-top: 80px;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: white;
+            border-bottom: 1px solid #ccc;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: #000 !important;
+            cursor: pointer;
+        }
+        .nav-link {
+            color: #000 !important;
+            font-weight: normal;
+            cursor: pointer;
+        }
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+      #loader {
+            display: none;           /* Hidden by default */
+            position: fixed;         /* Stay on top of page */
+            top: 50%;                /* Center vertically */
+            left: 50%;               /* Center horizontally */
+            transform: translate(-50%, -50%); /* Adjust to exact center */
+            z-index: 9999;           /* Make sure it's on top of all content */
+        }
+
+        #loader .spinner {
+            border: 8px solid #f3f3f3;   /* Light grey */
+            border-top: 8px solid #000;   /* Black */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Card Styling */
+        .place-card img {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .card {
+            border: 1px solid #ccc;
+        }
+
+        /* Travel Info Box */
+        .travel-info {
+            background-color: #f8f9fa;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 0.95rem;
+        }
+
+        /* Marquee Text */
+        marquee {
+            color: #000;
+            font-size: 1.05rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+         <div class="spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" onclick="navigateWithLoader('index.html')">
+                <img src="Emblem_of_Andhra_Pradesh.png" alt="AP Logo" width="40" height="40" class="me-2">
+                Andhra Pradesh Tourism
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" onclick="navigateWithLoader('home.html')">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="navigateWithLoader('about.html')">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container">
+        <h1 class="text-center">South Andhra Tourism</h1>
+        <p class="text-center lead">
+            <marquee>South Andhra Pradesh is known for its historical temples, scenic beaches, and the famous Tirumala Hills. Explore the spiritual and natural beauty of the region.</marquee>
+        </p>
+
+        <!-- Tourist Places -->
+        <div class="row g-4 mt-3">
+            <!-- Tirumala Temple -->
+            <div class="col-md-4">
+                <div class="card place-card shadow-sm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Tirumala_090615.jpg" class="card-img-top" alt="Tirumala Temple">
+                    <div class="card-body">
+                        <h5 class="card-title">Tirumala Venkateswara Temple</h5>
+                        <p class="card-text">One of the most visited pilgrimage sites in the world, dedicated to Lord Venkateswara, located in Tirupati.</p>
+                        <div class="travel-info">
+                            <strong>Travel Tips:</strong>
+                            <ul class="mb-0">
+                                <li>Nearest City: Tirupati</li>
+                                <li>Best Time: September–February</li>
+                                <li>Activities: Temple visit, hill trekking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Srikalahasti Temple -->
+            <div class="col-md-4">
+                <div class="card place-card shadow-sm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Sri_Kala_Hasti.jpg" class="card-img-top" alt="Srikalahasti Temple">
+                    <div class="card-body">
+                        <h5 class="card-title">Srikalahasti Temple</h5>
+                        <p class="card-text">A renowned temple dedicated to Lord Shiva, famous for its intricate architecture and religious importance.</p>
+                        <div class="travel-info">
+                            <strong>Travel Tips:</strong>
+                            <ul class="mb-0">
+                                <li>Nearest City: Tirupati</li>
+                                <li>Best Time: October–March</li>
+                                <li>Activities: Spiritual visit, photography</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pulicat Lake -->
+            <div class="col-md-4">
+                <div class="card place-card shadow-sm">
+                    <img src="https://media.assettype.com/thenewsminute%2Fimport%2Fsites%2Fdefault%2Ffiles%2Fflamingo__festival_2018_pti_(6)_-_Copy.jpg?w=480&auto=format%2Ccompress&fit=max" class="card-img-top" alt="Pulicat Lake">
+                    <div class="card-body">
+                        <h5 class="card-title">Pulicat Lake</h5>
+                        <p class="card-text">India’s second largest brackish water lake, known for its bird sanctuary and scenic beauty.</p>
+                        <div class="travel-info">
+                            <strong>Travel Tips:</strong>
+                            <ul class="mb-0">
+                                <li>Nearest Town: Sullurpet</li>
+                                <li>Best Time: November–January</li>
+                                <li>Activities: Bird watching, boating</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nellore Beach -->
+            <div class="col-md-4">
+                <div class="card place-card shadow-sm">
+                    <img src="https://content.jdmagicbox.com/comp/nellore/j4/9999px861.x861.230310074256.p1j4/catalogue/nelaturu-palem-beach-nellore-srec2q1h17.jpg" class="card-img-top" alt="Nellore Beach">
+                    <div class="card-body">
+                        <h5 class="card-title">Nellore Beach</h5>
+                        <p class="card-text">A serene beach in Nellore district, perfect for a peaceful evening by the Bay of Bengal.</p>
+                        <div class="travel-info">
+                            <strong>Travel Tips:</strong>
+                            <ul class="mb-0">
+                                <li>Nearest City: Nellore</li>
+                                <li>Best Time: November–February</li>
+                                <li>Activities: Beach walk, relaxation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Talakona Waterfalls -->
+            <div class="col-md-4">
+                <div class="card place-card shadow-sm">
+                    <img src="https://touritvirtually.com/wp-content/uploads/2015/11/text%20pics/tiv_talakona_text%20pics/Talakona_1.jpg" class="card-img-top" alt="Talakona Waterfalls">
+                    <div class="card-body">
+                        <h5 class="card-title">Talakona Waterfalls</h5>
+                        <p class="card-text">The highest waterfall in Andhra Pradesh, located in the Sri Venkateswara National Park.</p>
+                        <div class="travel-info">
+                            <strong>Travel Tips:</strong>
+                            <ul class="mb-0">
+                                <li>Nearest Town: Tirupati</li>
+                                <li>Best Time: August–January</li>
+                                <li>Activities: Trekking, photography, nature walks</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function navigateWithLoader(url) {
+            document.getElementById('loader').style.display = 'block';
+            setTimeout(() => {
+                window.location.href = url;
+            }, 1000); // 1-second loader before navigation
+        }
+    </script>
+</body>
+</html>

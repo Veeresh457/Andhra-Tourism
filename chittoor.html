@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chittoor District Tourism</title>
+  <link rel="icon" href="Emblem_of_Andhra_Pradesh.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background-color: white; font-family: 'Segoe UI', Arial, sans-serif; color: #000; padding-top: 80px; }
+    .navbar { background-color: white; border-bottom: 1px solid #ccc; }
+    .navbar-brand { font-weight: bold; color: #000 !important; }
+    .nav-link { color: #000 !important; font-weight: normal; }
+    .nav-link:hover { text-decoration: underline; }
+    h1 { color: #000; font-weight: bold; margin-bottom: 15px; }
+    .place-card img { height: 200px; object-fit: cover; border-radius: 5px; }
+    .card { border: 1px solid #ccc; }
+    .travel-info { background-color: #f8f9fa; padding: 12px; border-radius: 5px; font-size: 0.95rem; }
+    marquee { color: #000; font-size: 1.05rem; }
+    #loader { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 9999; }
+    .spinner { border: 8px solid #f3f3f3; border-top: 8px solid #000; border-radius: 50%; width: 60px; height: 60px; animation: spin 1s linear infinite; }
+    @keyframes spin { 0% { transform: rotate(0deg);} 100% { transform: rotate(360deg);} }
+  </style>
+</head>
+<body>
+  <div class="loader" id="loader"><div class="spinner"></div></div>
+
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="Emblem_of_Andhra_Pradesh.png" alt="AP Logo" width="40" height="40" class="me-2"> Andhra Pradesh Tourism
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="home.html" onclick="showLoader(event,'home.html')">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" onclick="showLoader(event,'about.html')">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 class="text-center">Chittoor District Tourism</h1>
+    <p class="text-center lead">
+      <marquee>Explore Chittoor—the green hills of Horsley, divine shrines of Kanipakam & Srikalahasti, serene falls, and thriving wildlife sanctuaries await!</marquee>
+    </p>
+    <div class="row g-4 mt-3">
+         <!-- Tirumala Temple -->
+            <div class="col-md-4">
+                <div class="card place-card shadow-sm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Tirumala_090615.jpg" class="card-img-top" alt="Tirumala Temple">
+                    <div class="card-body">
+                        <h5 class="card-title">Tirumala Venkateswara Temple</h5>
+                        <p class="card-text">One of the most visited pilgrimage sites in the world, dedicated to Lord Venkateswara, located in Tirupati.</p>
+                        <div class="travel-info">
+                            <strong>Travel Tips:</strong>
+                            <ul class="mb-0">
+                                <li>Nearest City: Tirupati</li>
+                                <li>Best Time: September–February</li>
+                                <li>Activities: Temple visit, hill trekking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+      <!-- Horsley Hills -->
+      <div class="col-md-4">
+        <div class="card place-card shadow-sm">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiIuL0mhkibUM45BkO2wYHpoHGB1wvsBP0lEXN85s2xVjttLnXGnJzKWrp-odnllVfQW1bVVA0Sk0x93hyphenhyphenO4a3GT_3O3Ekv8dzsmgACQimG1eZorp85fxOZA58a5TBdh1lIa3X07Ix5r0Xc/" class="card-img-top" alt="Horsley Hills">
+          <div class="card-body">
+            <h5 class="card-title">Horsley Hills</h5>
+            <p class="card-text">Known as the 'Ooty of Andhra Pradesh', this hill station offers cool climes, scenic views, and dense forests.</p>
+            <div class="travel-info">
+              <strong>Travel Tips:</strong>
+              <ul class="mb-0"><li>Best Time: Oct–Mar</li><li>Activities: Trekking, safari, nature walks</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kanipakam Vinayaka Temple -->
+      <div class="col-md-4">
+        <div class="card place-card shadow-sm">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZlO9kMxQSqwfePJaPHCsFGrXcjs_x-nKTw&s" class="card-img-top" alt="Kanipakam Temple">
+          <div class="card-body">
+            <h5 class="card-title">Kanipakam Vinayaka Temple</h5>
+            <p class="card-text">An 11th-century Dravidian-style Ganesha temple, famed for its self-manifested idol that grows over time.</p>
+            <div class="travel-info">
+              <strong>Travel Tips:</strong>
+              <ul class="mb-0"><li>Location: ~11 km from Chittoor</li><li>Festivals: 21-day Brahmotsavams in August–Sept</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Srikalahasti Temple -->
+      <div class="col-md-4">
+        <div class="card place-card shadow-sm">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Sri_Kala_Hasti.jpg" class="card-img-top" alt="Srikalahasti Temple">
+          <div class="card-body">
+            <h5 class="card-title">Srikalahasti Temple</h5>
+            <p class="card-text">A revered Shiva temple famous for Vayu Linga and its breath-taking gopurams and carvings.</p>
+            <div class="travel-info">
+              <strong>Travel Tips:</strong>
+              <ul class="mb-0"><li>Best Time: Year-round</li><li>Activities: Pilgrimage, architecture, rituals</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sri Venkateswara National Park -->
+      <div class="col-md-4">
+        <div class="card place-card shadow-sm">
+          <img src="https://s7ap1.scene7.com/is/image/incredibleindia/sri-venkateswara-national-park-tirupati-andhra-pradesh-1-attr-hero?qlt=82&ts=1742150197001" class="card-img-top" alt="Venkateswara National Park">
+          <div class="card-body">
+            <h5 class="card-title">Sri Venkateswara National Park</h5>
+            <p class="card-text">A biosphere rich in wildlife—elephants, leopards, giant squirrels, and rare gliding lizards thrive here.</p>
+            <div class="travel-info">
+              <strong>Travel Tips:</strong>
+              <ul class="mb-0"><li>Best Time: Nov–Feb</li><li>Activities: Wildlife safaris, nature trails</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card place-card shadow-sm">
+          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/f1/72/11/nagalapuram-falls.jpg?w=900&h=-1&s=1" class="card-img-top" alt="Nagalapuram Waterfalls">
+          <div class="card-body">
+            <h5 class="card-title">Nagalapuram Waterfalls</h5>
+            <p class="card-text">A picturesque trekking route takes you through forested trails to series of gentle falls.</p>
+            <div class="travel-info">
+              <strong>Travel Tips:</strong>
+              <ul class="mb-0"><li>Best Time: Monsoon to early winter</li><li>Activities: Trekking, photography, dip in falls</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function showLoader(event,url){ event.preventDefault(); document.getElementById('loader').style.display='block'; setTimeout(()=>window.location.href=url,1500); }
+  </script>
+</body>
+</html>

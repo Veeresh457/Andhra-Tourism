@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andhra Pradesh State Tourism</title>
+    <link rel="icon" href="Emblem_of_Andhra_Pradesh.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: white;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #000;
+            padding-top: 80px;
+        }
+
+        /* Navbar - Government Style */
+        .navbar {
+            background-color: white;
+            border-bottom: 1px solid #ccc;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: #000 !important;
+        }
+        .nav-link {
+            color: #000 !important;
+            font-weight: normal;
+        }
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Heading */
+        h1 {
+            color: #000;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Card Styling */
+        .place-card img {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .card {
+            border: 1px solid #ccc;
+        }
+
+        /* Travel Info Box */
+        .travel-info {
+            background-color: #f8f9fa;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 0.95rem;
+        }
+
+        /* Marquee Text */
+        marquee {
+            color: #000;
+            font-size: 1.05rem;
+        }
+
+      #loader {
+            display: none;           /* Hidden by default */
+            position: fixed;         /* Stay on top of page */
+            top: 50%;                /* Center vertically */
+            left: 50%;               /* Center horizontally */
+            transform: translate(-50%, -50%); /* Adjust to exact center */
+            z-index: 9999;           /* Make sure it's on top of all content */
+        }
+
+        #loader .spinner {
+            border: 8px solid #f3f3f3;   /* Light grey */
+            border-top: 8px solid #000;   /* Black */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+         <div class="spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="Emblem_of_Andhra_Pradesh.png" alt="AP Logo" width="40" height="40" class="me-2">
+                Andhra Pradesh Tourism
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="home.html" onclick="showLoader(event, 'home.html')">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html" onclick="showLoader(event, 'about.html')">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container">
+        <!-- Heading -->
+        <h1 class="text-center">North Andhra Tourism</h1>
+        <p class="text-center lead">
+            <marquee>North Andhra is famous for its pristine beaches, lush green hills, ancient temples, and vibrant culture. 
+            Explore the gems of Visakhapatnam, Vizianagaram, and Srikakulam districts.</marquee>
+        </p>
+
+        <!-- Tourist Places -->
+        <div class="row g-4 mt-3">
+            <!-- RK Beach -->
+            <div class="col-md-4">
+                <div class="card place-card shadow-sm">
+                    <img src="https://im.hunt.in/cg/visakhapatnam/City-Guide/sea.jpg" class="card-img-top" alt="RK Beach">
+                    <div class="card-body">
+                        <h5 class="card-title">Rama Krishna Beach (RK Beach)</h5>
+                        <p class="card-text">A popular beach in Visakhapatnam, perfect for morning walks, sunsets, and leisure activities. Close to museums and parks.</p>
+                        <div class="travel-info">
+                            <strong>Travel Tips:</strong>
+                            <ul class="mb-0">
+                                <li>Nearest Airport: Visakhapatnam Airport (12 km)</li>
+                                <li>Best Time: October–March</li>
+                                <li>Activities: Beach walk, photography, water sports</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Araku Valley -->
+            <div class="col-md-4">
+                <div class="card place-card shadow-sm">
+                    <img src="https://vizagtourism.org.in/images/places-to-visit/header/araku-valley-vizag-tourism-entry-fee-timings-holidays-reviews-header.jpg" class="card-img-top" alt="Araku Valley">
+                    <div class="card-body">
+                        <h5 class="card-title">Araku Valley</h5>
+                        <p class="card-text">A scenic hill station known for coffee plantations, waterfalls, and tribal culture. Surrounded by Eastern Ghats mountains.</p>
+                        <div class="travel-info">
+                            <strong>Travel Tips:</strong>
+                            <ul class="mb-0">
+                                <li>Nearest Railway: Araku Railway Station</li>
+                                <li>Best Time: September–February</li>
+                                <li>Activities: Trekking, coffee museum visit, tribal dance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Borra Caves -->
+            <div class="col-md-4">
+                <div class="card place-card shadow-sm">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFZhWZ-w_Qn9nBQ2365jhfOsNjTQ2-o_ij-g&s" class="card-img-top" alt="Borra Caves">
+                    <div class="card-body">
+                        <h5 class="card-title">Borra Caves</h5>
+                        <p class="card-text">Majestic limestone caves with stalactites and stalagmites, located amidst lush green hills and waterfalls.</p>
+                        <div class="travel-info">
+                            <strong>Travel Tips:</strong>
+                            <ul class="mb-0">
+                                <li>Nearest Town: Araku (35 km)</li>
+                                <li>Best Time: October–January</li>
+                                <li>Activities: Cave exploration, photography</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kalingapatnam Beach -->
+            <div class="col-md-4">
+                <div class="card place-card shadow-sm">
+                    <img src="https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2024/01/01/13e3e512d92d80e1b1c3330ad709d6dd_1000x1000.jpg" class="card-img-top" alt="Kalingapatnam Beach">
+                    <div class="card-body">
+                        <h5 class="card-title">Kalingapatnam Beach</h5>
+                        <p class="card-text">A serene beach in Srikakulam district, famous for its lighthouse, history, and peaceful sunsets.</p>
+                        <div class="travel-info">
+                            <strong>Travel Tips:</strong>
+                            <ul class="mb-0">
+                                <li>Nearest Town: Srikakulam (26 km)</li>
+                                <li>Best Time: November–February</li>
+                                <li>Activities: Relaxation, photography</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Simhachalam Temple -->
+            <div class="col-md-4">
+                <div class="card place-card shadow-sm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Simhachalam-temple-2_big.jpg/640px-Simhachalam-temple-2_big.jpg" class="card-img-top" alt="Simhachalam Temple">
+                    <div class="card-body">
+                        <h5 class="card-title">Simhachalam Temple</h5>
+                        <p class="card-text">An ancient temple dedicated to Lord Varaha Narasimha, blending architectural beauty with spiritual significance.</p>
+                        <div class="travel-info">
+                            <strong>Travel Tips:</strong>
+                            <ul class="mb-0">
+                                <li>Nearest City: Visakhapatnam (20 km)</li>
+                                <li>Best Time: Year-round</li>
+                                <li>Activities: Temple visit, spiritual rituals</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function showLoader(event, url) {
+            event.preventDefault(); // Prevent default link behavior
+            document.getElementById('loader').style.display = 'block';
+            setTimeout(() => {
+                window.location.href = url;
+            }, 2000); // 2-second loader
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kadapa District Tourism</title>
+  <link rel="icon" href="Emblem_of_Andhra_Pradesh.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background-color: white; font-family: 'Segoe UI', Arial, sans-serif; color: #000; padding-top: 80px; }
+    .navbar { background-color: white; border-bottom: 1px solid #ccc; }
+    .navbar-brand { font-weight: bold; color: #000 !important; }
+    .nav-link { color: #000 !important; font-weight: normal; }
+    .nav-link:hover { text-decoration: underline; }
+    h1 { color: #000; font-weight: bold; margin-bottom: 15px; }
+    .place-card img { height: 200px; object-fit: cover; border-radius: 5px; }
+    .card { border: 1px solid #ccc; }
+    .travel-info { background-color: #f8f9fa; padding: 12px; border-radius: 5px; font-size: 0.95rem; }
+    marquee { color: #000; font-size: 1.05rem; }
+    #loader { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999; }
+    .spinner { border: 8px solid #f3f3f3; border-top: 8px solid #000; border-radius: 50%; width: 60px; height: 60px; animation: spin 1s linear infinite; }
+    @keyframes spin { 0% { transform: rotate(0deg);} 100% { transform: rotate(360deg);} }
+  </style>
+</head>
+<body>
+  <div class="loader" id="loader"><div class="spinner"></div></div>
+
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="Emblem_of_Andhra_Pradesh.png" alt="AP Logo" width="40" height="40" class="me-2">
+        Andhra Pradesh Tourism
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="home.html" onclick="showLoader(event,'home.html')">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" onclick="showLoader(event,'about.html')">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 class="text-center">Kadapa District Tourism</h1>
+    <p class="text-center lead">
+      <marquee>Discover Kadapa—gateway to heritage forts, sacred temples, scenic canyons, and ancient caves wrapped in spiritual mystique.</marquee>
+    </p>
+
+    <div class="row g-4 mt-3">
+
+      <!-- Gandikota Fort -->
+      <div class="col-md-4">
+        <div class="card place-card shadow-sm">
+          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/4a/20/f2/grand-canyon-of-india.jpg?w=1200&h=1200&s=1" class="card-img-top" alt="Gandikota Fort">
+          <div class="card-body">
+            <h5 class="card-title">Gandikota Fort (Gandikota Canyon)</h5>
+            <p class="card-text">13th-century fortress overlooking the awe-inspiring Pennar river gorge, often called the 'Grand Canyon of India'.</p>
+            <div class="travel-info">
+              <strong>Travel Tips:</strong>
+              <ul class="mb-0">
+                <li>Best Time: Winter (Nov–Feb)</li>
+                <li>Activities: Heritage walk, canyon views, camping, sunrise & sunset views</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pushpagiri Temple Complex -->
+      <div class="col-md-4">
+        <div class="card place-card shadow-sm">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Pushpagiri_Temple_in_Kadapa_District.jpg" class="card-img-top" alt="Pushpagiri Temple">
+          <div class="card-body">
+            <h5 class="card-title">Pushpagiri Temple Complex</h5>
+            <p class="card-text">A sacred temple cluster dating back to the 7th century CE, rich with mythological significance and architectural detail.</p>
+            <div class="travel-info">
+              <strong>Travel Tips:</strong>
+              <ul class="mb-0">
+                <li>Activities: Pilgrimage, exploring temple architecture</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kodandarama Temple (Vontimitta) -->
+      <div class="col-md-4">
+        <div class="card place-card shadow-sm">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Sri_Kodanda_Rama_Swamy_Temple%2C_Vontimitta%2C_Kadapa.jpg" class="card-img-top" alt="Kodandarama Temple Vontimitta">
+          <div class="card-body">
+            <h5 class="card-title">Kodandarama Temple, Vontimitta</h5>
+            <p class="card-text">Majestic 16th-century Dravidian-style temple built by Chola and Vijayanagara kings with exquisite carvings.</p>
+            <div class="travel-info">
+              <strong>Travel Tips:</strong>
+              <ul class="mb-0">
+                <li>Location: ~25 km from Kadapa</li>
+                <li>Activities: Pilgrimage, architectural photography</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Belum Caves -->
+      <div class="col-md-4">
+        <div class="card place-card shadow-sm">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Belum_Caves_061.JPG" class="card-img-top" alt="Belum Caves">
+          <div class="card-body">
+            <h5 class="card-title">Belum Caves</h5>
+            <p class="card-text">The longest natural caves in India, stretching over 3,229 meters with subterranean depths and rock formations.</p>
+            <div class="travel-info">
+              <strong>Travel Tips:</strong>
+              <ul class="mb-0">
+                <li>Best Time: Post-monsoon to winter</li>
+                <li>Activities: Cave exploration, lighting photography</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bhagwan Mahavir Government Museum -->
+      <div class="col-md-4">
+        <div class="card place-card shadow-sm">
+          <img src="https://www.hlimg.com/images/things2do/738X538/ttd_1543313305m1.jpg?w=400&dpr=2.6" class="card-img-top" alt="Bhagwan Mahavir Museum">
+          <div class="card-body">
+            <h5 class="card-title">Bhagwan Mahavir Government Museum</h5>
+            <p class="card-text">Archaeological museum preserving artifacts from 5th to 18th century excavated across Kadapa region.</p>
+            <div class="travel-info">
+              <strong>Travel Tips:</strong>
+              <ul class="mb-0">
+                <li>Best Time: Year-round</li>
+                <li>Activities: History, archaeology, guided tours</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gandi Veeranjaneya Temple (Gandi Kshetram) -->
+      <div class="col-md-4">
+        <div class="card place-card shadow-sm">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJx9o5V4Gg1YoWY41N-BYro1AYRXBGN5FnJw&s" class="card-img-top" alt="Gandi Veeranjaneya Temple">
+          <div class="card-body">
+            <h5 class="card-title">Gandi Veeranjaneya Temple</h5>
+            <p class="card-text">Ancient temple where legend states Rama originally drew Hanuman’s image on rock—Veeranjaneya resides here.</p>
+            <div class="travel-info">
+              <strong>Travel Tips:</strong>
+              <ul class="mb-0">
+                <li>Location: On banks of Papaghni River, ~34 km from Pulivendula</li>
+                <li>Activities: Pilgrimage, local folklore, scenic backdrop</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function showLoader(event, url) {
+      event.preventDefault();
+      document.getElementById('loader').style.display = 'block';
+      setTimeout(() => window.location.href = url, 1500);
+    }
+  </script>
+</body>
+</html>

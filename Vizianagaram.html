@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vizianagaram District Tourism</title>
+    <link rel="icon" href="Emblem_of_Andhra_Pradesh.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: white;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #000;
+            padding-top: 80px;
+        }
+
+        /* Navbar - Government Style */
+        .navbar {
+            background-color: white;
+            border-bottom: 1px solid #ccc;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: #000 !important;
+        }
+        .nav-link {
+            color: #000 !important;
+            font-weight: normal;
+        }
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Heading */
+        h1 {
+            color: #000;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Card Styling */
+        .place-card img {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .card {
+            border: 1px solid #ccc;
+        }
+
+        /* Travel Info Box */
+        .travel-info {
+            background-color: #f8f9fa;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 0.95rem;
+        }
+
+        /* Marquee Text */
+        marquee {
+            color: #000;
+            font-size: 1.05rem;
+        }
+
+        #loader {
+            display: none;         
+            position: fixed;        
+            top: 50%;               
+            left: 50%;              
+            transform: translate(-50%, -50%); 
+            z-index: 9999;          
+        }
+
+        #loader .spinner {
+            border: 8px solid #f3f3f3;  
+            border-top: 8px solid #000;   
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+         <div class="spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="Emblem_of_Andhra_Pradesh.png" alt="AP Logo" width="40" height="40" class="me-2">
+                Andhra Pradesh Tourism
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="home.html" onclick="showLoader(event, 'home.html')">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html" onclick="showLoader(event, 'about.html')">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container">
+        <!-- Heading -->
+        <h1 class="text-center">Vizianagaram District Tourism</h1>
+        <p class="text-center lead">
+            <marquee>Vizianagaram district, the "City of Victory," is known for its rich cultural heritage, palaces, temples, and scenic natural beauty.</marquee>
+        </p>
+
+        <!-- Tourist Places -->
+        <div class="row g-4 mt-3">
+
+            <!-- Vizianagaram Fort -->
+            <div class="col-md-4">
+                <div class="card place-card shadow-sm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Viznm_kota.jpg/500px-Viznm_kota.jpg" class="card-img-top" alt="Vizianagaram Fort">
+                    <div class="card-body">
+                        <h5 class="card-title">Vizianagaram Fort</h5>
+                        <p class="card-text">A historical fort built in the 18th century by Maharaja Vijaya Rama Raju, showcasing the glory of Vizianagaram Samsthanam.</p>
+                        <div class="travel-info">
+                            <strong>Travel Tips:</strong>
+                            <ul class="mb-0">
+                                <li>Nearest City: Vizianagaram</li>
+                                <li>Best Time: October–March</li>
+                                <li>Activities: Heritage walk, photography</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ganta Stambham -->
+            <div class="col-md-4">
+                <div class="card place-card shadow-sm">
+                    <img src="https://seawatersports.com/images/places/ganta-stambham.png" class="card-img-top" alt="Ganta Stambham">
+                    <div class="card-body">
+                        <h5 class="card-title">Ganta Stambham (Clock Tower)</h5>
+                        <p class="card-text">A landmark structure in Vizianagaram town built during the British era, symbolizing the district's heritage.</p>
+                        <div class="travel-info">
+                            <strong>Travel Tips:</strong>
+                            <ul class="mb-0">
+                                <li>Located in: Vizianagaram Town</li>
+                                <li>Best Time: Year-round</li>
+                                <li>Activities: Sightseeing, photography</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thatipudi Reservoir -->
+            <div class="col-md-4">
+                <div class="card place-card shadow-sm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Taatipudi_reservoir_%282%29.jpg/250px-Taatipudi_reservoir_%282%29.jpg" class="card-img-top" alt="Thatipudi Reservoir">
+                    <div class="card-body">
+                        <h5 class="card-title">Thatipudi Reservoir</h5>
+                        <p class="card-text">A scenic reservoir surrounded by hills, ideal for picnics, boating, and enjoying nature.</p>
+                        <div class="travel-info">
+                            <strong>Travel Tips:</strong>
+                            <ul class="mb-0">
+                                <li>Nearest Town: Vizianagaram (20 km)</li>
+                                <li>Best Time: July–February</li>
+                                <li>Activities: Boating, nature walks, photography</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ramateertham -->
+            <div class="col-md-4">
+                <div class="card place-card shadow-sm">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmyoK7Ff5NnBCNEGLdoSCqLcHTWJAhfJrLQg&s" class="card-img-top" alt="Ramateertham Temple">
+                    <div class="card-body">
+                        <h5 class="card-title">Ramateertham</h5>
+                        <p class="card-text">An ancient temple dedicated to Lord Rama, located on a hillock, with Buddhist and Jain relics nearby.</p>
+                        <div class="travel-info">
+                            <strong>Travel Tips:</strong>
+                            <ul class="mb-0">
+                                <li>Nearest Town: Vizianagaram (12 km)</li>
+                                <li>Best Time: October–March</li>
+                                <li>Activities: Temple visit, trekking, sightseeing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bobbili Fort -->
+            <div class="col-md-4">
+                <div class="card place-card shadow-sm">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZZ-wIIcepBnWetbg9h9XcDd44OE8NhZwCeQ&s" class="card-img-top" alt="Bobbili Fort">
+                    <div class="card-body">
+                        <h5 class="card-title">Bobbili Fort</h5>
+                        <p class="card-text">Built in the 18th century, this fort is famous for the Bobbili battle and the valour of its rulers.</p>
+                        <div class="travel-info">
+                            <strong>Travel Tips:</strong>
+                            <ul class="mb-0">
+                                <li>Nearest Town: Bobbili (55 km from Vizianagaram)</li>
+                                <li>Best Time: October–February</li>
+                                <li>Activities: Historical exploration, photography</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function showLoader(event, url) {
+            event.preventDefault(); 
+            document.getElementById('loader').style.display = 'block';
+            setTimeout(() => {
+                window.location.href = url;
+            }, 2000);
+        }
+    </script>
+
+</body>
+</html>

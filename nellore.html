@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nellore District Tourism</title>
+  <link rel="icon" href="Emblem_of_Andhra_Pradesh.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background: white; font-family: 'Segoe UI', Arial, sans-serif; color: #000; padding-top: 80px; }
+    .navbar { background: white; border-bottom: 1px solid #ccc; }
+    .navbar-brand { font-weight: bold; color: #000 !important; }
+    .nav-link { color: #000 !important; font-weight: normal; }
+    .nav-link:hover { text-decoration: underline; }
+    h1 { color: #000; font-weight: bold; margin-bottom: 15px; }
+    .place-card img { height: 200px; object-fit: cover; border-radius: 5px; }
+    .card { border: 1px solid #ccc; }
+    .travel-info { background-color: #f8f9fa; padding: 12px; border-radius: 5px; font-size: 0.95rem; }
+    marquee { color: #000; font-size: 1.05rem; }
+    #loader { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 9999; }
+    #loader .spinner { border: 8px solid #f3f3f3; border-top: 8px solid #000; border-radius: 50%; width: 60px; height: 60px; animation: spin 1s linear infinite; }
+    @keyframes spin { 0% {transform: rotate(0deg);} 100% {transform: rotate(360deg);} }
+  </style>
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="Emblem_of_Andhra_Pradesh.png" alt="AP Logo" width="40" height="40" class="me-2">
+        Andhra Pradesh Tourism
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="home.html" onclick="showLoader(event,'home.html')">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" onclick="showLoader(event,'about.html')">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="container">
+    <h1 class="text-center">Nellore District Tourism</h1>
+    <p class="text-center lead">
+      <marquee> Explore Nellore—where ancient temples, serene beaches, rich wildlife, and vibrant history meet along the Penna and Bay of Bengal.</marquee>
+    </p>
+
+    <div class="row g-4 mt-3">
+
+      <!-- Ranganathaswamy Temple -->
+      <div class="col-md-4">
+        <div class="card place-card shadow-sm">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjn-H-0xuMvYTAkgQu3C24yFKYpDKFNjfNcw&s" class="card-img-top" alt="Ranganathaswamy Temple">
+          <div class="card-body">
+            <h5 class="card-title">Sri Talpagiri Ranganathaswamy Temple</h5>
+            <p class="card-text">An ancient Vishnu temple (12th century) on the banks of Penna River, adorned by a grand Gaaligopuram.</p>
+            <div class="travel-info">
+              <strong>Travel Tips:</strong>
+              <ul class="mb-0">
+                <li>Location: Nellore</li>
+                <li>Best Time: March–April for Brahmotsavam</li>
+                <li>Activities: Worship, heritage photography</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Penchalakona Temple & Waterfall -->
+      <div class="col-md-4">
+        <div class="card place-card shadow-sm">
+          <img src="https://resources.thomascook.in/images/holidays/sightSeeing/Penchalakona%20Waterfalls.jpeg" class="card-img-top" alt="Penchalakona Temple">
+          <div class="card-body">
+            <h5 class="card-title">Penchalakona Temple</h5>
+            <p class="card-text">A peaceful Narasimha shrine near a scenic waterfall, perfect for devotion and nature walks.</p>
+            <div class="travel-info">
+              <strong>Travel Tips:</strong>
+              <ul class="mb-0">
+                <li>Best Time: Year-round</li>
+                <li>Activities: Pilgrimage, easy trekking, nature</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mypadu Beach -->
+      <div class="col-md-4">
+        <div class="card place-card shadow-sm">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUdqeTYnfP_GZ0zbKDfoLwz212TtRqohbUEQ&s" class="card-img-top" alt="Mypadu Beach">
+          <div class="card-body">
+            <h5 class="card-title">Mypadu Beach</h5>
+            <p class="card-text">Golden sands and calm waves on the Bay of Bengal, with growing attractions like water sports and resorts.</p>
+            <div class="travel-info">
+              <strong>Travel Tips:</strong>
+              <ul class="mb-0">
+                <li>Location: ~25 km from Nellore</li>
+                <li>Best Time: October–March</li>
+                <li>Activities: Beach walks, boating, sunset watching</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nelapattu Bird Sanctuary -->
+      <div class="col-md-4">
+        <div class="card place-card shadow-sm">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/SpotBilledPelican-Nelapattu.jpg" class="card-img-top" alt="Nelapattu Bird Sanctuary">
+          <div class="card-body">
+            <h5 class="card-title">Nelapattu Bird Sanctuary</h5>
+            <p class="card-text">A birdwatcher's delight—home to pelicans, flamingos, storks, and over 180 species of migratory birds.</p>
+            <div class="travel-info">
+              <strong>Travel Tips:</strong>
+              <ul class="mb-0">
+                <li>Best Time: November–February</li>
+                <li>Activities: Birdwatching, photography, tranquil trail walks</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Udayagiri Fort -->
+      <div class="col-md-4">
+        <div class="card place-card shadow-sm">
+          <img src="https://kanyakumaritourism.in/images/places-to-visit/headers/udayagiri-fort-kanyakumari-tourism-entry-fee-timings-holidays-reviews-header.jpg" class="card-img-top" alt="Udayagiri Fort">
+          <div class="card-body">
+            <h5 class="card-title">Udayagiri Fort</h5>
+            <p class="card-text">Historic hill fort offering panoramic views, with layers of Chola, Vijayanagara and local cultural heritage.</p>
+            <div class="travel-info">
+              <strong>Travel Tips:</strong>
+              <ul class="mb-0">
+                <li>Best Time: October–March</li>
+                <li>Activities: Heritage walk, panoramic photos, light trekking</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Narasimha Konda -->
+      <div class="col-md-4">
+        <div class="card place-card shadow-sm">
+          <img src="https://srinarasimhakutumbam.org/wp-content/uploads/2015/07/Narasimha_Konda_IMG_20150417_084624.jpg" class="card-img-top" alt="Narasimha Konda">
+          <div class="card-body">
+            <h5 class="card-title">Narasimha Konda</h5>
+            <p class="card-text">A 350-ft hill near Jonnawada with an ancient Narasimha shrine, built by Pallava king Narasimhavarman I.</p>
+            <div class="travel-info">
+              <strong>Travel Tips:</strong>
+              <ul class="mb-0">
+                <li>Best Time: Year-round</li>
+                <li>Activities: Pilgrimage, light trek, panoramic hilltop views</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function showLoader(event, url) {
+      event.preventDefault();
+      document.getElementById('loader').style.display = 'block';
+      setTimeout(() => window.location.href = url, 1500);
+    }
+  </script>
+</body>
+</html>

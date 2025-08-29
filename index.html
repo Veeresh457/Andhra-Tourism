@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andhra Pradesh State Tourism</title>
+    <link rel="icon" href="Emblem_of_Andhra_Pradesh.png" type="image/png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: white;
+            min-height: 100vh;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding-top: 100px;
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+
+        .big-text {
+            font-size: 1.8rem;
+            margin-top: 20px;
+            color: #000;
+        }
+
+        /* Permanent button color without hover/click change */
+        .btn-custom {
+            background-color: #000 !important;
+            color: white !important;
+            border: none !important;
+        }
+        .btn-custom:hover,
+        .btn-custom:focus,
+        .btn-custom:active {
+            background-color: #000 !important;
+            color: white !important;
+            box-shadow: none !important;
+        }
+
+        /* Loader */
+        #loader {
+            display: none;           /* Hidden by default */
+            position: fixed;         /* Stay on top of page */
+            top: 50%;                /* Center vertically */
+            left: 50%;               /* Center horizontally */
+            transform: translate(-50%, -50%); /* Adjust to exact center */
+            z-index: 9999;           /* Make sure it's on top of all content */
+        }
+
+        #loader .spinner {
+            border: 8px solid #f3f3f3;   /* Light grey */
+            border-top: 8px solid #000;   /* Black */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo -->
+    <img src="Emblem_of_Andhra_Pradesh.png" alt="Logo" class="logo">
+
+    <!-- Big Text -->
+    <div class="big-text">Andhra Pradesh State Tourism</div>
+
+    <!-- Welcome Button -->
+    <button id="welcomeBtn" class="btn btn-custom btn-lg mt-3">Welcome</button>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.getElementById('welcomeBtn').addEventListener('click', function () {
+            // Show loader
+            document.getElementById('loader').style.display = 'flex';
+
+            // Delay 2s to match home page loader style, then redirect
+            setTimeout(function () {
+                window.location.href = 'home.html';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
